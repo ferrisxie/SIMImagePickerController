@@ -23,7 +23,11 @@
  */
 @property (nonatomic, strong) UIBarButtonItem* doneButton;
 /**
- *  quick way to present an SIMImagePickerController
+ *  quick way to init an SIMImagePickerController
  */
 +(instancetype)imagePickerWithSourceType:(UIImagePickerControllerSourceType)type doneButtonTitle:(NSString*)title completionHandler:(void(^)(UIImage *image))handler;
+/**
+ * quick way to present an SIMImagePickerController
+ */
++(instancetype)showImagePickerWithSourceType:(UIImagePickerControllerSourceType)type doneButtonTitle:(NSString*)title completionHandler:(void(^)(UIImage *image))handler;
 @end
