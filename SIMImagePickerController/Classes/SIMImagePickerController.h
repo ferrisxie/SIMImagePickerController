@@ -12,14 +12,18 @@
 /**
  *	The block that fires after the receiver finished picking up an image
  */
-@property (nonatomic, copy) void(^sim_didFinishPickingImageBlock)(UIImagePickerController *, NSDictionary<NSString*,id> *);
+@property (nonatomic, copy) void(^sim_didFinishPickingImageBlock)(SIMImagePickerController *, NSDictionary<NSString*,id> *);
 
 /**
  *	The block that fires after the user cancels out of picker
  */
-@property (nonatomic, copy) void(^sim_didCancelBlock)(UIImagePickerController *);
+@property (nonatomic, copy) void(^sim_didCancelBlock)(SIMImagePickerController *);
 /**
  *  The doneButton in the right of the navigation bar, default is "Done".
  */
 @property (nonatomic, strong) UIBarButtonItem* doneButton;
+/**
+ *  quick way to present an SIMImagePickerController
+ */
++(instancetype)imagePickerWithSourceType:(UIImagePickerControllerSourceType)type doneButtonTitle:(NSString*)title completionHandler:(void(^)(UIImage *image))handler;
 @end
