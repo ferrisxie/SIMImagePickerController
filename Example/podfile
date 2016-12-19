@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SIMImagePickerController_Example' do
+  pod 'SIMImagePickerController', :path => '../'
+
+  target 'SIMImagePickerController_Tests' do
+    inherit! :search_paths
+
+    pod 'MWPhotoBrowser'
+  end
+end
